@@ -1,0 +1,55 @@
+# Ancient Civilizations Explorer - Task List
+
+- [x] Project Planning & Setup
+    - [x] Create implementation plan
+    - [x] Initialize project structure
+- [x] Content Design & Asset Generation
+    - [x] Research details for Ancient Egypt, Rome, and Indus Valley
+    - [x] Generate UI textures (parchment, wooden desk)
+    - [x] Generate thematic illustrations for each civilization
+- [x] Core UI Development
+    - [x] Implement the "Open Book" layout with CSS
+    - [x] Design the typography and decorative elements
+    - [x] Build the navigation system (Table of Contents)
+- [x] Civilization Pages Implementation
+    - [x] Ancient Egypt section
+    - [x] Ancient Rome section
+    - [x] Indus Valley Civilization section
+- [x] Content Expansion & Detail Enhancement
+    - [x] Research and add detailed "Maps & Geography" section for each civ
+    - [x] Expand "Culture & Daily Life" with specific societal details
+    - [x] Detail specific "Inventions & Scientific Contributions"
+    - [x] Add a "Legacy" section to each civilization
+- [x] Interaction & Polish
+    - [x] Add page-turn animations or transitions
+    - [x] Implement responsive design for smaller screens
+    - [x] Final visual audit and refinement
+- [x] Big Project Expansion
+    - [x] Create Journal Cover and Table of Contents (Home/Selector)
+    - [x] Add "Ancient Wars" plates for all civs
+    - [x] Add "Trade Routes" plates for all civs
+    - [x] Add "Mythology" plates for all civs
+    - [x] Add "Famous Rulers" plates for all civs
+    - [x] Create Gallery and About/Closing plates
+- [x] Massive Encyclopedia Expansion
+    - [x] Research 20 distinct thematic chapters for each of the 6 civilizations
+    - [x] Reorganize data into a scalable structure (data-driven navigation)
+    - [x] Implement 20 chapters for Ancient Egypt
+    - [x] Implement 20 chapters for Ancient Rome
+    - [x] Implement 20 chapters for Indus Valley
+    - [x] Implement 20 chapters for Ancient Greece
+    - [x] Implement 20 chapters for Mesopotamia
+    - [x] Implement 20 chapters for Mayan Civilization
+    - [x] Enhance UI with chapter numbering and deep navigation controls
+- [x] UI Refinement & Interaction Polish
+    - [x] Remove 3D tilt effect on page navigation
+    - [x] Add smooth opacity-based content transitions
+    - [x] Implement a "Chapter Progress Timeline" for quick navigation
+    - [x] Enhance book corner "peel" hover effects
+    - [x] Add persistent "Index" button to all pages
+    - [x] Update walkthrough with new UI features
+- [x] Visual Enrichment & Maps
+    - [x] Integrate existing illustrations for Egypt, Rome, and Indus
+    - [x] Generate hand-drawn SVG sketch maps for Greece, Mesopotamia, and Maya
+    - [x] Update `main.js` to enable the illustration system across all plates
+    - [x] Final visual audit and walkthrough update
