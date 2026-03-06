@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ancient Civilizations Explorer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="desk">
+        <main class="book">
+            <div class="page left-page">
+                <div class="page-content" id="left-content">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+            <div class="page right-page">
+                <div class="page-content" id="right-content">
+                    <!-- Dynamic Content -->
+                </div>
+            </div>
+
+            <nav class="bookmarks">
+                <button class="bookmark active" data-civ="egypt">Egypt</button>
+                <button class="bookmark" data-civ="mesopotamia">Mesopotamia</button>
+                <button class="bookmark" data-civ="indus">Indus Valley</button>
+                <button class="bookmark" data-civ="greece">Greece</button>
+                <button class="bookmark" data-civ="rome">Rome</button>
+                <button class="bookmark" data-civ="maya">Maya</button>
+            </nav>
+
+            <div class="controls">
+                <button id="prev-btn" class="nav-btn">← Previous</button>
+                <button id="next-btn" class="nav-btn">Next →</button>
+            </div>
+        </main>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>

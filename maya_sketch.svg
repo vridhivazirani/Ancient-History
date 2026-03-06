@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background:transparent;">
+  <!-- Mayan Sketch Map -->
+  <rect x="50" y="50" width="300" height="200" fill="#2e7d32" opacity="0.05"/>
+  <path d="M100,50 Q300,50 350,150 Q320,250 150,250 Z" fill="none" stroke="#5d4037" stroke-width="1" stroke-dasharray="4,4"/>
+  <text x="150" y="80" font-family="Cinzel" font-size="16" fill="#5d4037" font-weight="bold">Yucatán</text>
+  <text x="100" y="200" font-family="Cinzel" font-size="12" fill="#5d4037">Highlands</text>
+  <!-- Cities -->
+  <circle cx="200" cy="120" r="4" fill="#2e7d32"/>
+  <text x="210" y="125" font-family="Cinzel" font-size="10" fill="#5d4037">Chichén Itzá</text>
+  <circle cx="150" cy="180" r="4" fill="#2e7d32"/>
+  <text x="160" y="185" font-family="Cinzel" font-size="10" fill="#5d4037">Tikal</text>
+  <circle cx="120" cy="220" r="4" fill="#2e7d32"/>
+  <text x="130" y="225" font-family="Cinzel" font-size="10" fill="#5d4037">Palenque</text>
+  <!-- Rainforest -->
+  <path d="M300,200 L320,180 L340,200 Z" fill="#2e7d32" opacity="0.2"/>
+  <path d="M280,220 L300,200 L320,220 Z" fill="#2e7d32" opacity="0.2"/>
+</svg>

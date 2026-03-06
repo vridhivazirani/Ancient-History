@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 300" style="background:transparent;">
+  <!-- Mesopotamia Sketch Map -->
+  <path d="M100,50 Q150,150 120,250" fill="none" stroke="#5d4037" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+  <path d="M180,40 Q230,140 200,260" fill="none" stroke="#5d4037" stroke-width="2" stroke-dasharray="5,5" opacity="0.6"/>
+  <text x="50" y="40" font-family="Cinzel" font-size="12" fill="#5d4037">Assyria</text>
+  <text x="250" y="100" font-family="Cinzel" font-size="12" fill="#5d4037">Akkad</text>
+  <text x="140" y="220" font-family="Cinzel" font-size="14" fill="#5d4037" font-weight="bold">Babylonia</text>
+  <text x="200" y="280" font-family="Cinzel" font-size="12" fill="#5d4037">Sumer</text>
+  <!-- River names -->
+  <text x="80" y="150" font-family="Spectral" font-size="10" fill="#5d4037" transform="rotate(75 80 150)" font-style="italic">Tigris River</text>
+  <text x="160" y="150" font-family="Spectral" font-size="10" fill="#5d4037" transform="rotate(75 160 150)" font-style="italic">Euphrates River</text>
+  <!-- City dots -->
+  <circle cx="150" cy="200" r="3" fill="#b8860b"/>
+  <text x="155" y="200" font-family="Spectral" font-size="10" fill="#5d4037">Babylon</text>
+  <circle cx="210" cy="250" r="3" fill="#b8860b"/>
+  <text x="215" y="250" font-family="Spectral" font-size="10" fill="#5d4037">Ur</text>
+  <circle cx="110" cy="80" r="3" fill="#b8860b"/>
+  <text x="115" y="80" font-family="Spectral" font-size="10" fill="#5d4037">Nineveh</text>
+</svg>

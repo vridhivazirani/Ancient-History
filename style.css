@@ -1,0 +1,362 @@
+:root {
+    --sepia-dark: #1e140a;
+    --sepia-medium: #4e342e;
+    --sepia-light: #efebe9;
+    --ink-black: #0a0a0a;
+    --gold-accent: #a67c00;
+    --parchment-bg: #f9f4e8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--sepia-dark);
+    font-family: 'Cormorant Garamond', serif;
+    color: var(--ink-black);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Atmospheric desk background */
+.desk {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url('wooden_desk_background_1772794951898.png') no-repeat center center;
+    background-size: cover;
+    perspective: 1500px;
+}
+
+.book {
+    position: relative;
+    width: 90%;
+    max-width: 1200px;
+    height: 80vh;
+    display: flex;
+    box-shadow: 0 50px 100px rgba(0, 0, 0, 0.8);
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Page styling */
+.page {
+    flex: 1;
+    background-color: var(--parchment-bg);
+    background-image: url('parchment.png');
+    background-size: cover;
+    background-blend-mode: soft-light;
+    /* Softened for better legibility */
+    padding: 3.5rem;
+    position: relative;
+    overflow-y: auto;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.left-page {
+    border-radius: 10px 0 0 10px;
+    border-right: none;
+    box-shadow: inset -30px 0 50px rgba(0, 0, 0, 0.2), -10px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+.right-page {
+    border-radius: 0 10px 10px 0;
+    border-left: none;
+    box-shadow: inset 30px 0 50px rgba(0, 0, 0, 0.2), 10px 0 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Deckle edge effect */
+.page::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    width: 5px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="5" height="100%"><rect width="5" height="100%" fill="rgba(0,0,0,0.05)"/></svg>');
+    z-index: 5;
+}
+
+.left-page::before {
+    left: 0;
+    border-radius: 10px 0 0 10px;
+}
+
+.right-page::before {
+    right: 0;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Spine effect */
+.book::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background: rgba(0, 0, 0, 0.3);
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 10;
+}
+
+/* Bookmarks */
+.bookmarks {
+    position: absolute;
+    right: -40px;
+    top: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 20;
+}
+
+.bookmark {
+    background: var(--gold-accent);
+    color: white;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, background 0.3s;
+}
+
+.bookmark:hover {
+    transform: translateX(5px);
+    background: #cd853f;
+}
+
+.bookmark.active {
+    background: var(--sepia-medium);
+    transform: translateX(10px);
+}
+
+/* Typography */
+h1,
+h2,
+h3 {
+    font-family: 'Cinzel', serif;
+    color: var(--sepia-dark);
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 2px double var(--sepia-medium);
+    padding-bottom: 0.5rem;
+    font-weight: 700;
+    /* Bolder titles */
+}
+
+p {
+    line-height: 1.8;
+    /* Increased line-height */
+    margin-bottom: 1.5rem;
+    font-size: 1.25rem;
+    /* Increased font-size */
+    text-align: justify;
+    font-weight: 500;
+    /* Added weight for clarity */
+    color: var(--ink-black);
+}
+
+.illustration-box {
+    width: 100%;
+    margin: 2rem 0;
+    border: 5px solid rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    background: white;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.illustration-box img {
+    width: 100%;
+    filter: sepia(0.2) contrast(1.1);
+    /* Reduced sepia for better image clarity */
+}
+
+/* Navigation buttons */
+.controls {
+    position: absolute;
+    bottom: -60px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+}
+
+.nav-btn {
+    background: var(--sepia-medium);
+    color: var(--parchment-bg);
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Cinzel', serif;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-weight: 700;
+}
+
+.nav-btn:hover {
+    background: var(--sepia-dark);
+}
+
+/* Chapter Timeline */
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2rem;
+    padding: 10px 0;
+    border-top: 1px solid rgba(128, 64, 0, 0.1);
+    position: relative;
+}
+
+.timeline-dot {
+    width: 8px;
+    height: 8px;
+    background: var(--sepia-medium);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.2s;
+    position: relative;
+    opacity: 0.3;
+}
+
+.timeline-dot:hover {
+    transform: scale(1.5);
+    opacity: 1;
+    background: var(--gold-accent);
+}
+
+.timeline-dot.active {
+    background: var(--gold-accent);
+    opacity: 1;
+    box-shadow: 0 0 5px var(--gold-accent);
+}
+
+/* Tooltip for timeline dots */
+.timeline-dot::after {
+    content: attr(data-title);
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--sepia-dark);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 4px;
+    font-size: 0.7rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s;
+    font-family: 'Cinzel', serif;
+    z-index: 1000;
+}
+
+.timeline-dot:hover::after {
+    opacity: 1;
+}
+
+/* Corner Peel Effects */
+.page::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    opacity: 0.1;
+    transition: opacity 0.3s;
+}
+
+.page-left::after {
+    left: 0;
+    background: linear-gradient(135deg, transparent 75%, var(--sepia-medium) 100%);
+}
+
+.page-right::after {
+    right: 0;
+    background: linear-gradient(-135deg, transparent 75%, var(--sepia-medium) 100%);
+}
+
+.page:hover::after {
+    opacity: 0.3;
+}
+
+/* Book Container Override (Removing Tilt) */
+.book {
+    transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .book {
+        flex-direction: column;
+        height: auto;
+        width: 95%;
+        margin-top: 50px;
+    }
+
+    .page {
+        width: 100%;
+        min-height: 500px;
+        box-shadow: none;
+    }
+
+    .page-left {
+        border-right: none;
+        border-bottom: 2px solid var(--sepia-medium);
+    }
+}
+
+/* TOC link styling */
+ul li {
+    transition: 0.3s;
+    padding: 5px 10px;
+    border-left: 0px solid var(--gold-accent);
+    cursor: pointer;
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+}
+
+ul li:hover {
+    padding-left: 20px;
+    border-left: 5px solid var(--gold-accent);
+    color: var(--gold-accent);
+}
+
+h3 {
+    font-size: 1.3rem;
+    color: var(--sepia-medium);
+    font-style: italic;
+    border: none;
+    margin-top: -1rem;
+    margin-bottom: 2rem;
+}
+
+/* Scrollbar styling */
+.page::-webkit-scrollbar {
+    width: 8px;
+}
+
+.page::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.page::-webkit-scrollbar-thumb {
+    background: var(--sepia-medium);
+    border-radius: 10px;
+}
